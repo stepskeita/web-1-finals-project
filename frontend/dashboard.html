@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Web 1 Final Project</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Navigation Header -->
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="navbar-brand">
+            <h1>GMIS</h1>
+          </div>
+          <ul class="navbar-menu">
+            <li><a href="/dashboard.html" class="nav-link">Dashboard</a></li>
+            <li><a href="/price-submission.html" class="nav-link">Submit Price</a></li>
+            <li class="admin-only"><a href="/manage-products.html" class="nav-link">Manage Products</a></li>
+            <li class="admin-only"><a href="/manage-markets.html" class="nav-link">Manage Markets</a></li>
+            <li><a href="/prices.html" class="nav-link">View Prices</a></li>
+          </ul>
+          <div class="navbar-user">
+            <div id="user-info"></div>
+            <button id="logout-btn" class="btn btn-secondary btn-sm">Logout</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-container">
+      <div class="container">
+        <!-- Page Header -->
+        <header class="page-header">
+          <h2>Dashboard</h2>
+          <p>Welcome back! Here's an overview of your activity.</p>
+        </header>
+
+        <!-- Statistics Cards -->
+        <section class="stats-section">
+          <div id="stats-container">
+            <!-- Stats will be loaded dynamically -->
+          </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="recent-activity">
+          <header class="section-header">
+            <h3>Recent Price Submissions</h3>
+            <a href="/price-submission.html" class="btn btn-primary">Submit New Price</a>
+          </header>
+
+          <div id="recent-submissions-container">
+            <!-- Recent submissions will be loaded dynamically -->
+          </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions-section">
+          <header class="section-header">
+            <h3>Quick Actions</h3>
+          </header>
+          
+          <div id="quick-actions-container">
+            <!-- Quick actions will be loaded dynamically -->
+          </div>
+        </section>
+          </header>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Market</th>
+                  <th>Price</th>
+                  <th>Unit</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="recent-submissions">
+                <tr>
+                  <td colspan="6" class="no-data">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+          <header class="section-header">
+            <h3>Quick Actions</h3>
+          </header>
+          <div class="action-cards">
+            <article class="action-card">
+              <h4>📝 Submit Price</h4>
+              <p>Add new price information</p>
+              <a href="/price-submission.html" class="btn btn-outline">Get Started</a>
+            </article>
+
+            <article class="action-card">
+              <h4>📦 View Products</h4>
+              <p>Browse all products</p>
+              <a href="/manage-products.html" class="btn btn-outline">View All</a>
+            </article>
+
+            <article class="action-card">
+              <h4>🏪 View Markets</h4>
+              <p>Explore markets</p>
+              <a href="/manage-markets.html" class="btn btn-outline">Explore</a>
+            </article>
+            
+            <article class="action-card">
+              <h4>💰 View Prices</h4>
+              <p>Browse published prices</p>
+              <a href="/prices.html" class="btn btn-outline">View Prices</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <p>&copy; 2026 Web 1 Final Project. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+  
+  <script type="module" src="/src/pages/dashboard.js"></script>
+</body>
+</html>

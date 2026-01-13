@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Markets - Web 1 Final Project</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation Header -->
+      <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <h1>GMIS</h1>
+            </div>
+            <ul class="navbar-menu">
+              <li><a href="/dashboard.html" class="nav-link">Dashboard</a></li>
+              <li>
+                <a href="/price-submission.html" class="nav-link"
+                  >Submit Price</a
+                >
+              </li>
+              <li class="admin-only">
+                <a href="/manage-products.html" class="nav-link"
+                  >Manage Products</a
+                >
+              </li>
+              <li class="admin-only">
+                <a href="/manage-markets.html" class="nav-link active"
+                  >Manage Markets</a
+                >
+              </li>
+              <li><a href="/prices.html" class="nav-link">View Prices</a></li>
+            </ul>
+            <div class="navbar-user">
+              <div id="user-info"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="container">
+          <!-- Page Header -->
+          <section class="page-header">
+            <div class="page-header-content">
+              <h1>Manage Markets</h1>
+              <p>Add, edit, and manage all markets in the system</p>
+            </div>
+            <div class="page-header-actions">
+              <button id="add-market-btn" class="btn btn-primary">
+                ➕ Add Market
+              </button>
+            </div>
+          </section>
+
+          <!-- Search and Filter Section -->
+          <section class="filters-section" id="filters-section">
+            <div class="filters-container">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search markets by name or city..."
+                  class="form-input"
+                />
+              </div>
+              <div class="filter-group">
+                <select id="type-filter" class="form-select">
+                  <option value="">All Types</option>
+                  <option value="supermarket">Supermarket</option>
+                  <option value="farmers-market">Farmers Market</option>
+                  <option value="wholesale">Wholesale</option>
+                  <option value="local-store">Local Store</option>
+                  <option value="online">Online</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="status-filter" class="form-select">
+                  <option value="">All Status</option>
+                  <option value="true">Active</option>
+                  <option value="false">Inactive</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- Markets Table -->
+          <section class="content-section">
+            <div class="table-container" id="markets-table-container">
+              <!-- Table will be populated by JavaScript -->
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="container">
+          <p>&copy; 2026 Web 1 Final Project. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/pages/manage-markets.js"></script>
+  </body>
+</html>

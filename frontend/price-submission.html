@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Price - Web 1 Final Project</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation Header -->
+      <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <h1>GMIS</h1>
+            </div>
+            <ul class="navbar-menu">
+              <li><a href="/dashboard.html" class="nav-link">Dashboard</a></li>
+              <li>
+                <a href="/price-submission.html" class="nav-link"
+                  >Submit Price</a
+                >
+              </li>
+              <li class="admin-only">
+                <a href="/manage-products.html" class="nav-link"
+                  >Manage Products</a
+                >
+              </li>
+              <li class="admin-only">
+                <a href="/manage-markets.html" class="nav-link"
+                  >Manage Markets</a
+                >
+              </li>
+              <li><a href="/prices.html" class="nav-link">View Prices</a></li>
+            </ul>
+            <div class="navbar-user">
+              <div id="user-info"></div>
+              <button id="logout-btn" class="btn btn-secondary btn-sm">
+                Logout
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="page-container">
+        <div class="container">
+          <!-- Page Header -->
+          <header class="page-header">
+            <h2>Submit Price Information</h2>
+            <p>
+              Help build our price database by submitting accurate price
+              information.
+            </p>
+          </header>
+
+          <!-- Submission Form -->
+          <section class="form-section">
+            <article class="form-card">
+              <form
+                id="price-submission-form"
+                class="submission-form"
+                novalidate
+              >
+                <!-- Product Selection -->
+                <fieldset class="form-fieldset">
+                  <legend>Product Information</legend>
+
+                  <div class="form-group">
+                    <label for="product">Product *</label>
+                    <select id="product" name="product" required>
+                      <option value="">Select a product</option>
+                      <!-- Options will be loaded dynamically -->
+                    </select>
+                    <span class="error-message" id="product-error"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                    <input
+                      type="text"
+                      id="category"
+                      name="category"
+                      readonly
+                      placeholder="Will be auto-filled"
+                    />
+                  </div>
+                </fieldset>
+
+                <!-- Market Selection -->
+                <fieldset class="form-fieldset">
+                  <legend>Market Information</legend>
+
+                  <div class="form-group">
+                    <label for="market">Market *</label>
+                    <select id="market" name="market" required>
+                      <option value="">Select a market</option>
+                      <!-- Options will be loaded dynamically -->
+                    </select>
+                    <span class="error-message" id="market-error"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="market-address">Market Address</label>
+                    <input
+                      type="text"
+                      id="market-address"
+                      name="marketAddress"
+                      readonly
+                      placeholder="Will be auto-filled"
+                    />
+                  </div>
+                </fieldset>
+
+                <!-- Price Information -->
+                <fieldset class="form-fieldset">
+                  <legend>Price Details</legend>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="price">Price ($) *</label>
+                      <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        placeholder="0.00"
+                        step="0.01"
+                        min="0"
+                        required
+                      />
+                      <span class="error-message" id="price-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="unit">Unit *</label>
+                      <select id="unit" name="unit" required>
+                        <option value="">Select unit</option>
+                        <option value="piece">Piece</option>
+                        <option value="kg">Kilogram (kg)</option>
+                        <option value="lb">Pound (lb)</option>
+                        <option value="oz">Ounce (oz)</option>
+                        <option value="g">Gram (g)</option>
+                        <option value="dozen">Dozen</option>
+                        <option value="liter">Liter</option>
+                        <option value="gallon">Gallon</option>
+                        <option value="bunch">Bunch</option>
+                        <option value="bag">Bag</option>
+                        <option value="box">Box</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <span class="error-message" id="unit-error"></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="date" id="date" name="date" required />
+                    <span class="error-message" id="date-error"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      rows="4"
+                      maxlength="500"
+                      placeholder="Add any relevant information (optional, max 500 characters)"
+                    ></textarea>
+                    <small class="form-help"
+                      >Character count:
+                      <span id="notes-count">0</span>/500</small
+                    >
+                    <span class="error-message" id="notes-error"></span>
+                  </div>
+                </fieldset>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="reset-btn"
+                  >
+                    Reset Form
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Submit Price
+                  </button>
+                </div>
+
+                <div class="form-message" id="form-message"></div>
+              </form>
+            </article>
+
+            <!-- Help Section -->
+            <aside class="help-section">
+              <article class="help-card">
+                <h3>📝 Submission Guidelines</h3>
+                <ul>
+                  <li>Ensure prices are accurate and current</li>
+                  <li>Select the correct product and market</li>
+                  <li>Specify the appropriate unit of measurement</li>
+                  <li>Add notes for special conditions (sale, bulk, etc.)</li>
+                  <li>Submissions are reviewed before approval</li>
+                </ul>
+              </article>
+
+              <article class="help-card">
+                <h3>ℹ️ Need Help?</h3>
+                <p>
+                  If you can't find a product or market in the list, please
+                  contact an administrator to add it.
+                </p>
+              </article>
+            </aside>
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="container">
+          <p>&copy; 2026 Web 1 Final Project. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/pages/price-submission.js"></script>
+  </body>
+</html>

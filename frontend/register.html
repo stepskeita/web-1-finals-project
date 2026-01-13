@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - GMIS</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation Header -->
+      <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <h1>GMIS</h1>
+            </div>
+            <ul class="navbar-menu">
+              <li><a href="/index.html" class="nav-link">Home</a></li>
+              <li><a href="/prices.html" class="nav-link">View Prices</a></li>
+              <li><a href="/login.html" class="nav-link">Login</a></li>
+              <li>
+                <a href="/register.html" class="nav-link active">Register</a>
+              </li>
+            </ul>
+            <div class="navbar-user">
+              <div id="user-info"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="auth-container">
+        <section class="auth-card">
+          <header class="auth-header">
+            <h1>Create Account</h1>
+            <p>Join us today! Fill in the details to get started.</p>
+          </header>
+
+          <form id="register-form" class="auth-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+                autocomplete="name"
+              />
+              <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                autocomplete="email"
+              />
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password (min 6 characters)"
+                required
+                minlength="6"
+                autocomplete="new-password"
+              />
+              <span class="error-message" id="password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+                autocomplete="new-password"
+              />
+              <span class="error-message" id="confirm-password-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Account Type</label>
+              <select id="role" name="role" required>
+                <option value="">Select account type</option>
+                <option value="collector">Collector</option>
+                <option value="admin">Admin</option>
+              </select>
+              <span class="error-message" id="role-error"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="terms" name="terms" required />
+                <span
+                  >I agree to the
+                  <a href="#" target="_blank">Terms and Conditions</a></span
+                >
+              </label>
+              <span class="error-message" id="terms-error"></span>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">
+                Create Account
+              </button>
+            </div>
+
+            <div class="form-message" id="form-message"></div>
+          </form>
+
+          <footer class="auth-footer">
+            <p>Already have an account? <a href="/login.html">Login here</a></p>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/pages/register.js"></script>
+  </body>
+</html>

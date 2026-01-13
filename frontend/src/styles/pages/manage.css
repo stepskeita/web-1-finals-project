@@ -1,0 +1,100 @@
+/* ===================================
+   Management Pages (Products & Markets)
+   =================================== */
+
+.page-container {
+  padding: var(--spacing-xl) 0;
+  min-height: calc(100vh - 120px);
+}
+
+/* Filters Section */
+.filters-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-box {
+  flex: 1 1 300px;
+  min-width: 200px;
+}
+
+.search-box input {
+  width: 100%;
+}
+
+.filter-group {
+  flex: 1 1 200px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+}
+
+/* Prices Grid */
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+/* Form Section for Price Submission */
+.form-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-2xl);
+}
+
+.form-card {
+  background-color: var(--bg-card);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.help-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.help-card {
+  background-color: var(--color-info);
+  color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+}
+
+.help-card h3 {
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.help-card ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.help-card li {
+  margin-bottom: var(--spacing-sm);
+}

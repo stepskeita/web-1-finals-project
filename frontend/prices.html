@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Prices - Web 1 Final Project</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation Header -->
+      <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <h1>GMIS</h1>
+            </div>
+            <ul class="navbar-menu">
+              <li><a href="/index.html" class="nav-link">Home</a></li>
+              <li>
+                <a href="/prices.html" class="nav-link active">View Prices</a>
+              </li>
+              <li><a href="/login.html" class="nav-link">Login</a></li>
+              <li><a href="/register.html" class="nav-link">Register</a></li>
+            </ul>
+            <div class="navbar-user">
+              <div id="user-info"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="container">
+          <!-- Page Header -->
+          <section class="page-header">
+            <div class="page-header-content">
+              <h1>Published Prices</h1>
+              <p>Browse current approved product prices from various markets</p>
+            </div>
+          </section>
+
+          <!-- Search and Filter Section -->
+          <section class="filters-section" id="filters-section">
+            <div class="filters-container">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search by product or market..."
+                  class="form-input"
+                />
+              </div>
+              <div class="filter-group">
+                <select id="product-filter" class="form-select">
+                  <option value="">All Products</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="market-filter" class="form-select">
+                  <option value="">All Markets</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <select id="sort-filter" class="form-select">
+                  <option value="-date">Latest First</option>
+                  <option value="date">Oldest First</option>
+                  <option value="price">Price: Low to High</option>
+                  <option value="-price">Price: High to Low</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- Statistics Section -->
+          <section class="stats-section">
+            <div class="stats-grid" id="price-stats">
+              <!-- Stats will be populated by JavaScript -->
+            </div>
+          </section>
+
+          <!-- Prices Grid -->
+          <section class="content-section">
+            <div id="prices-container">
+              <!-- Prices will be populated by JavaScript -->
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="main-footer">
+        <div class="container">
+          <p>&copy; 2026 Web 1 Final Project. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/pages/prices.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+/* ===================================
+   CSS Foundation - Web 1 Final Project
+   Modular CSS Architecture
+   =================================== */
+
+/* Import Normalize.css for cross-browser consistency */
+@import "normalize.css";
+
+/* Foundation */
+@import "./styles/variables.css";
+@import "./styles/base.css";
+@import "./styles/utilities.css";
+
+/* Components */
+@import "./styles/components/buttons.css";
+@import "./styles/components/forms.css";
+@import "./styles/components/cards.css";
+@import "./styles/components/tables.css";
+@import "./styles/components/modal.css";
+@import "./styles/components/navigation.css";
+
+/* Pages */
+@import "./styles/pages/auth.css";
+@import "./styles/pages/dashboard.css";
+@import "./styles/pages/manage.css";
+
+/* Responsive */
+@import "./styles/responsive.css";

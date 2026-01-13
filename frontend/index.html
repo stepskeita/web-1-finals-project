@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMIS - Gambia Market Intelligence System</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation Header -->
+      <header class="main-header">
+        <div class="container">
+          <nav class="navbar">
+            <div class="navbar-brand">
+              <h1>GMIS</h1>
+            </div>
+            <ul class="navbar-menu">
+              <li><a href="/index.html" class="nav-link active">Home</a></li>
+              <li><a href="/prices.html" class="nav-link">View Prices</a></li>
+              <li><a href="/login.html" class="nav-link">Login</a></li>
+              <li><a href="/register.html" class="nav-link">Register</a></li>
+            </ul>
+            <div class="navbar-user">
+              <div id="user-info"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="landing-container">
+        <header class="landing-header">
+          <h1>Gambia Market Intelligence System</h1>
+          <p>Track and compare prices across different markets</p>
+        </header>
+
+        <section class="landing-content">
+          <article class="welcome-card">
+            <h2>Welcome!</h2>
+            <p>
+              This application helps you track and submit price information for
+              products across various markets.
+            </p>
+
+            <div class="landing-actions">
+              <a href="/prices.html" class="btn btn-secondary">View Prices</a>
+              <a href="/login.html" class="btn btn-primary">Login</a>
+              <a href="/register.html" class="btn btn-secondary">Register</a>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <h3>Available Pages:</h3>
+            <nav class="page-links">
+              <ul>
+                <li>� <a href="/prices.html">View Prices (Public)</a></li>
+                <li>🔐 <a href="/login.html">Login Page</a></li>
+                <li>📝 <a href="/register.html">Register Page</a></li>
+                <li>📊 <a href="/dashboard.html">Dashboard</a></li>
+                <li>
+                  💵 <a href="/price-submission.html">Price Submission</a>
+                </li>
+                <li>
+                  📦 <a href="/manage-products.html">Manage Products (Admin)</a>
+                </li>
+                <li>
+                  🏪 <a href="/manage-markets.html">Manage Markets (Admin)</a>
+                </li>
+              </ul>
+            </nav>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
