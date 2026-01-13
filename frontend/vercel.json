@@ -1,10 +1,33 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/frontend/browser",
+  "outputDirectory": "dist",
+  "framework": "vite",
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index.html", "destination": "/index.html" },
+    { "source": "/login.html", "destination": "/login.html" },
+    { "source": "/register.html", "destination": "/register.html" },
+    { "source": "/dashboard.html", "destination": "/dashboard.html" },
+    { "source": "/prices.html", "destination": "/prices.html" },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/price-submission.html",
+      "destination": "/price-submission.html"
+    },
+    {
+      "source": "/manage-products.html",
+      "destination": "/manage-products.html"
+    },
+    { "source": "/manage-markets.html", "destination": "/manage-markets.html" }
+  ],
+  "headers": [
+    {
+      "source": "/src/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
