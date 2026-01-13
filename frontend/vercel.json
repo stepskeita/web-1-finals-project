@@ -1,27 +1,12 @@
 {
+  "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/index.html", "destination": "/index.html" },
-    { "source": "/login.html", "destination": "/login.html" },
-    { "source": "/register.html", "destination": "/register.html" },
-    { "source": "/dashboard.html", "destination": "/dashboard.html" },
-    { "source": "/prices.html", "destination": "/prices.html" },
-    {
-      "source": "/price-submission.html",
-      "destination": "/price-submission.html"
-    },
-    {
-      "source": "/manage-products.html",
-      "destination": "/manage-products.html"
-    },
-    { "source": "/manage-markets.html", "destination": "/manage-markets.html" }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
-      "source": "/src/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
