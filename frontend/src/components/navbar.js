@@ -11,6 +11,12 @@ import { logout, getUser, isAdmin } from '../services/auth.service.js';
 export function initNavbar() {
   const user = getUser();
 
+  // Make brand link auth-aware
+  const brandLink = document.getElementById('brand-link');
+  if (brandLink && user) {
+    brandLink.href = '/dashboard.html';
+  }
+
   if (!user) {
     // For public pages, show login/register
     const userInfoElement = document.getElementById('user-info');

@@ -2,9 +2,41 @@
    Management Pages (Products & Markets)
    =================================== */
 
-.page-container {
+.page-container,
+.main-content {
   padding: var(--spacing-xl) 0;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 140px);
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.page-header-content {
+  flex: 1 1 auto;
+  min-width: 250px;
+}
+
+.page-header-content h1 {
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-2xl);
+}
+
+.page-header-content p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.page-header-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 /* Filters Section */
@@ -48,6 +80,24 @@
 .filter-group input,
 .filter-group select {
   width: 100%;
+}
+
+/* Content Section */
+.content-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.table-container {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Prices Grid */
